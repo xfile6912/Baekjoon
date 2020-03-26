@@ -30,7 +30,7 @@ int main(void)
 	distance = distance - info[n - 1][0];
 	for (i = n-1; i > 0; i--)
 	{
-		info[i][0] = info[i][0] - info[i - 1][0];
+		info[i][0] = info[i][0] - info[i - 1][0];//info[i][0]에는 이전 주유소와의 거리가 저장되있음
 	}
 	int flag;
 	flag = 1;
@@ -41,7 +41,7 @@ int main(void)
 		{
 			while (fuel<0)
 			{
-				if (q.empty())//중간에 못가는경우
+				if (q.empty())//기름이 없어 다음 주유소로 못가는경우
 				{
 					flag = 0;
 					break;
@@ -68,7 +68,7 @@ int main(void)
 		{
 			while (fuel < 0)
 			{
-				if (q.empty())//중간에 못가는경우
+				if (q.empty())//마을까지 못가는경우
 				{
 					flag = 0;
 					break;
