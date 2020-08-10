@@ -47,13 +47,14 @@ int main(void)
 			continue;
 		if (ftree[parentv1] < ftree[parentv2])
 		{
-			ftree[parentv2] += ftree[parentv1];
-			ftree[parentv1] = parentv2;
+			ftree[parentv1] += ftree[parentv2];
+			ftree[parentv2] = parentv1;
 		}
 		else
 		{
-			ftree[parentv1] += ftree[parentv2];
-			ftree[parentv2] = parentv1;
+			ftree[parentv2] += ftree[parentv1];
+			ftree[parentv1] = parentv2;
+
 
 		}
 		total += line[i][2];
